@@ -33,7 +33,7 @@ const String iosDefaultIconFolder =
     'ios/Runner/Assets.xcassets/AppIcon.appiconset/';
 const String iosAssetFolder = 'ios/Runner/Assets.xcassets/';
 const String iosConfigFile = 'ios/Runner.xcodeproj/project.pbxproj';
-const String iosDefaultIconName = 'Icon-App';
+const String iosDefaultIconName = 'AppIcon';
 
 // web
 /// favicon.ico size
