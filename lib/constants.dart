@@ -4,7 +4,7 @@ import 'package:path/path.dart' as path;
 
 /// Relative path to android resource folder
 String androidResFolder(String? flavor) =>
-    "android/app/src/${flavor ?? 'main'}/res/";
+    "android/app/src/${(flavor ?? 'main').isEmpty ? 'main' : flavor}/res/";
 
 /// Relative path to android colors.xml file
 String androidColorsFile(String? flavor) =>

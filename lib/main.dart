@@ -34,6 +34,14 @@ List<String> getFlavors() {
       }
     }
   }
+
+  if (flavors.isNotEmpty) {
+    final emptyFlavorFile = File('flutter_launcher_icons.yaml');
+    if (emptyFlavorFile.existsSync()) {
+      flavors.add('');
+    }
+  }
+
   return flavors;
 }
 
@@ -101,7 +109,7 @@ Future<void> createIconsFromArguments(List<String> arguments) async {
   } else {
     try {
       for (String flavor in flavors) {
-        print('\nFlavor: $flavor');
+        print('\nFlavor: "$flavor"');
         final flutterLauncherIconsConfigs =
             Config.loadConfigFromFlavor(flavor, prefixPath);
         if (flutterLauncherIconsConfigs == null) {

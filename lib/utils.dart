@@ -80,4 +80,6 @@ String? areFSEntiesExist(List<String> paths) {
   return null;
 }
 
-String flavorConfigFile(String flavor) => 'flutter_launcher_icons-$flavor.yaml';
+String flavorConfigFile(String flavor) => flavor.isEmpty
+    ? 'flutter_launcher_icons.yaml'
+    : 'flutter_launcher_icons-$flavor.yaml';
